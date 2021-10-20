@@ -26,48 +26,36 @@ void fEnregStock(void)
 
 void fSaisieStock(int *ref, int *qte, float *prix, int *secu, char *rep)
 {
-	printf("Donnez le numero de produit: ");
-	scanf("%d", nProd);
-	while (*nProd<0)
+	prinft("Voulez-vous ajouter une ligne de stock ? (répondre oui ou non)\n");
+	scanf("%c", rep);
+	if (*rep='non')
+		exit(1);
+	printf("Donnez la référence du produit: \n");
+	scanf("%d", ref);
+	while (*ref<0)
 	{	
-		printf("Erreur, le numéro de produit doit être positif(ou nul pour arrêter). Retapez :");
-		scanf("%d", nProd);
+		printf("Erreur, la référence du produit doit être positif. Retapez :\n");
+		scanf("%d", ref);
 	}
-	printf("Rentrez la date (jj/mm/aaaa) :");
-	scanf("%d/%d/%d", j, m, a);
-	rep=fVerifDate(j, m);
-	while (rep!=0)
-	{
-		if (rep==1)
-		{	printf("Erreur, la date est incorrecte, les mois sont numérotés de 1 à 12. Retapez :");
-			scanf("%d/%d/%d", j, m, a);
-			rep=fVerifDate(j, m);
-		}
-		else
-		{	printf("Erreur, la date est incorrecte, les jours sont numérotés de 1 à 31. Retapez :");
-			scanf("%d/%d/%d", j, m, a);
-			rep=fVerifDate(j, m);
-		}
-	}
-	printf("Saisir le numéro de destinataire :");
-	scanf("%d", nDest);
-	while (*nDest<0)
-	{	
-		printf("Erreur, le numéro de destinataire doit être positif. Retapez :");
-		scanf("%d", nDest);
-	}
-	printf("Saisir la quantité :");
+	printf("Rentrez la quantité :\n");
 	scanf("%d", qte);
 	while (*qte<0)
-	{	
-		printf("Erreur, la quantité doit être positif. Retapez :");
+	{
+		printf("Erreur, la quantité doit être positif. Retapez :\n");
 		scanf("%d", qte);
 	}
-	printf("Saisir le poids :");
-	scanf("%d", poids);
-	while (*poids<0)
-	{	
-		printf("Erreur, le poids doit être positif. Retapez :");
-		scanf("%f", poids);
+	printf("Rentrez le prix :\n");
+	scanf("%.2f", prix);
+	while (*prix<0)
+	{
+		printf("Erreur, le prix doit être positif. Retapez :\n");
+		scanf("%.2f", qte);
+	}
+	printf("Rentrez le seuil de sécurité :\n");
+	scanf("%d/", secu);
+	while (*secu<0)
+	{
+		printf("Erreur, le seuil de sécurité doit être positif. Retapez :\n");
+		scanf("%d", secu);
 	}
 }
