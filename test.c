@@ -40,6 +40,13 @@ void fSaisieStock(int *ref, int *qte, float *prix, int *secu, char *rep)  //fonc
 		printf("Erreur, la référence du produit doit être positif. Retapez :\n");
 		scanf("%d", ref);
 	}
+	printf("Rentrez le seuil de sécurité :\n");
+	scanf("%d/", secu);
+	while (*secu<0)
+	{
+		printf("Erreur, le seuil de sécurité doit être positif. Retapez :\n");
+		scanf("%d", secu);
+	}
 	printf("Rentrez la quantité :\n");
 	scanf("%d", qte);
 	while (*qte<0)
@@ -54,16 +61,4 @@ void fSaisieStock(int *ref, int *qte, float *prix, int *secu, char *rep)  //fonc
 		printf("Erreur, le prix doit être positif. Retapez :\n");
 		scanf("%.2f", qte);
 	}
-	printf("Rentrez le seuil de sécurité :\n");
-	scanf("%d/", secu);
-	while (*secu<0 && *secu>*qte)
-	{
-		if (*secu<0)
-			printf("Erreur, le seuil de sécurité doit être positif. Retapez :\n");
-			scanf("%d", secu);
-		else (*secu>qte)
-			printf("Erreur, le seuil de sécurité doit être inférieur à la quantité. Retapez :\n");
-			scanf("%d", secu)
-	}
-	//while secu et while qte peuvent être inversées
 }
