@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "test.h"
 
-void fEnregEnvoisV1(void)
+void fEnregStock(void)
 {
 	FILE *flot;
 	int ref, qte, secu;
