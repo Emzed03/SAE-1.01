@@ -4,5 +4,5 @@
 int main(void)
 {
     fEnregEnvoisV1()
-    return;
+    return 0;
 }
