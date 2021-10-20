@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "test.h"
 
-//wAllah je t'aime zak fais moi des enfants bordel
+
 
 
 
