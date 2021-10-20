@@ -53,9 +53,14 @@ void fSaisieStock(int *ref, int *qte, float *prix, int *secu, char *rep)
 	}
 	printf("Rentrez le seuil de sécurité :\n");
 	scanf("%d/", secu);
-	while (*secu<0)
+	while (*secu<0 && *secu>*qte)
 	{
-		printf("Erreur, le seuil de sécurité doit être positif. Retapez :\n");
-		scanf("%d", secu);
+		if (*secu<0)
+			printf("Erreur, le seuil de sécurité doit être positif. Retapez :\n");
+			scanf("%d", secu);
+		else (*secu>qte)
+			printf("Erreur, le seuil de sécurité doit être inférieur à la quantité. Retapez :\n");
+			scanf("%d", secu)
 	}
+	//while secu et while qte peuvent être inversées
 }
