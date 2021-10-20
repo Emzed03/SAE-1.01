@@ -3,12 +3,7 @@
 
 void global(void)
 {
-          
-    
-    
-    
-    
-    
+          fEnregStock;
 }    
    
 int main(void)
