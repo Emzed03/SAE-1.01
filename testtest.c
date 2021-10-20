@@ -1,8 +1,18 @@
 #import <stdio.h>
 #import "test.h"
 
+void global(void)
+{
+          
+    
+    
+    
+    
+    
+}    
+   
 int main(void)
 {
-    fEnregEnvoisV1()
+    global()
     return 0;
 }
