@@ -2,8 +2,11 @@
 #include <stdlib.h>
 #include "test.h"
 
+//wAllah je t'aime zak fais moi des enfants bordel
 
-void fEnregStock(void)
+
+
+void fEnregStock(void)  //fonction enregistrement de stock
 {
 	FILE *flot;
 	int ref, qte, secu;
@@ -24,7 +27,7 @@ void fEnregStock(void)
 	fclose(flot);
 }	
 
-void fSaisieStock(int *ref, int *qte, float *prix, int *secu, char *rep)
+void fSaisieStock(int *ref, int *qte, float *prix, int *secu, char *rep)  //fonction saisie de stock
 {
 	prinft("Voulez-vous ajouter une ligne de stock ? (répondre oui ou non)\n");
 	scanf("%c", rep);
