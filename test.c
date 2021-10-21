@@ -102,5 +102,19 @@ void etatStock(int ref[], int qte[], float prix[], int secu[], int nb)
 	 	printf("%d\t\n", secu[i]);
 	}
 }
+
+int fRecherche(int tab[], int nb, int n)
+{
+	int i;
+	for(i=0;i<nb;i++)
+	{
+		if((tab[1]==n)
+		  return i;
+		   }
+return -1;
+		   }
+		   
+		 
+	
 	
 
