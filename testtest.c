@@ -9,7 +9,7 @@ void global(void)
 	nb=chargement(ref,qte,prix,secu,100);
 	if(nb==-1 || nb==-2)
 		return;
-	afficherTabs(num,moy,type,nb);
+	afficherTabs(ref,qte,prix,secu,nb);
 }    
    
 int main(void)
