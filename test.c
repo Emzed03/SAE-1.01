@@ -62,3 +62,36 @@ void fSaisieStock(int *ref, int *qte, float *prix, int *secu, char *rep)  //fonc
 		scanf("%.2f", qte);
 	}
 }
+
+int chargement(int ref[], int qte[], float prix[],int secu[], int tmax) //retourne i = taille physique des tables
+								// retourne -1 ou -2 si erreur
+{
+	FILE * flot;
+	float p;
+	int r, q, s, i=0;
+	flot=fopen("stock.txt","r");
+	if(flot==NULL)
+	{
+		printf("Problème d'ouverture du fichier en lecture.\n");
+		return -1;
+	}
+	fscanf(flot,"%d%d%.2f%d", &r, &q, &p, &s);
+	while(!feof(flot))
+	{
+		if (i==tmax)
+		{	printf("Le tableau est plein.\n");
+			return -2;
+		}
+			ref[i]=r;
+			qte[i]=q;
+			prix[i]=p;
+			secu[i]=s;
+			i=i+1;
+		}
+		fscanf(flot,"%d%d%.2f%d", &r, &q, &p, &s);
+	}
+	fclose(flot);
+	return i;
+}
+
+				
