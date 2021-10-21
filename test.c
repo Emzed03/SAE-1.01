@@ -51,11 +51,11 @@ void fSaisieStock(int *ref, int *qte, float *prix, int *secu, char *rep)  //fonc
 		scanf("%d", qte);
 	}
 	printf("Rentrez le prix :\n");
-	scanf("%.2f", prix);
+	scanf("%f", prix);
 	while (*prix<0)
 	{
 		printf("Erreur, le prix doit être positif. Retapez :\n");
-		scanf("%.2f", qte);
+		scanf("%f", prix);
 	}
 }
 
