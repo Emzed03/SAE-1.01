@@ -2,10 +2,6 @@
 #include <stdlib.h>
 #include "test.h"
 
-
-
-
-
 void fEnregStock(void)  //fonction enregistrement de stock
 {
 	FILE *flot;
@@ -94,4 +90,17 @@ int chargement(int ref[], int qte[], float prix[],int secu[], int tmax) //retour
 	return i;
 }
 
-				
+
+void etatStock(int ref[], int qte[], float prix[], int secu[], int nb)
+{
+	int i;
+	printf("Référence\tQuantité\tPrix\tSeuil."); //à modifier par rapport à taille des tableaux
+	for(i=0; i<nb; i=i+1)
+	{	printf("%d\t", ref[i]);
+		printf("%d\t", qte[i]);
+		printf("%.2f\t", prix[i]);
+	 	printf("%d\t\n", secu[i]);
+	}
+}
+	
+
