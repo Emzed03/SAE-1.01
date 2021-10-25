@@ -115,6 +115,23 @@ return -1;
 		   }
 		   
 		 
-	
+int menu(void)
+{
+    int commande;
+
+    printf("<<<<<bienvenus>>>>>\n");
+    printf("Cliquez sur 1 pour Entrer un ou plusieurs nouveaux items\n");
+    printf("Cliquez sur 2 pour Supprimer un ou plusieurs items\n");
+    printf("Cliquez sur 3 pour Faire un devis\n");
+    printf("Cliquez sur 4 pour Recapitulatif des ventes\n");
+    printf("Cliquez sur 5 pour Approvisionner le stock\n");
+    printf("Cliquez sur 6 pour Traiter une commande\n");
+    printf("0 pour annuler et quitter\t");
+    scanf("%d",&commande);
+     return commande;
+
+}
+
+
 	
 
